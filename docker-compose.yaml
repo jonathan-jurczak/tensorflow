@@ -1,0 +1,15 @@
+docker-compose.yaml
+services:
+  jupyter-lab:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/notebooks
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
