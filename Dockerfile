@@ -1,6 +1,6 @@
 FROM tensorflow/tensorflow:latest-gpu
 
-WORKDIR /jz-tensorflow
+WORKDIR /notebooks
 
 COPY requirements.txt requirements.txt
 
